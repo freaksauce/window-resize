@@ -4,7 +4,8 @@
   "description": "Optimised window resize function using requestAnimationFrame",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest",
+    "start": "./node_modules/.bin/babel index.js --out-dir lib"
   },
   "repository": {
     "type": "git",
@@ -28,12 +29,15 @@
   },
   "homepage": "https://github.com/freaksauce/window-resize#readme",
   "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
     "jest": "^23.6.0"
-  },
-  "scripts": {
-    "test": "jest"
   },
   "jest": {
     "verbose": true
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
   }
 }
