@@ -36,8 +36,5 @@
   },
   "jest": {
     "verbose": true
-  },
-  "dependencies": {
-    "@babel/polyfill": "^7.0.0"
   }
 }
