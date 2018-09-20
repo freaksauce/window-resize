@@ -1,0 +1,6 @@
+.gitignore
+.travis.yml
+babel.config.js
+package-lock.json
+README.md
+index.js
