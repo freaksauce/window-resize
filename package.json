@@ -1,0 +1,39 @@
+{
+  "name": "window-resize",
+  "version": "0.0.1",
+  "description": "Optimised window resize function using requestAnimationFrame",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freaksauce/window-resize.git"
+  },
+  "keywords": [
+    "window",
+    "document",
+    "resize",
+    "requestAnimationFrame",
+    "setTimeout",
+    "callback",
+    "callbacks",
+    "addEventListener",
+    "removeEventListener"
+  ],
+  "author": "Jon Bloomer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freaksauce/window-resize/issues"
+  },
+  "homepage": "https://github.com/freaksauce/window-resize#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true
+  }
+}
