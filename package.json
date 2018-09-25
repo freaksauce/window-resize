@@ -4,7 +4,7 @@
   "description": "Optimised window resize function using requestAnimationFrame",
   "main": "./lib/index.js",
   "scripts": {
-    "prepublish": "./node_modules/.bin/babel index.js --out-dir lib"
+    "prepare": "./node_modules/.bin/babel index.js --out-dir lib"
   },
   "repository": {
     "type": "git",
