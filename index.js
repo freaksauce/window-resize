@@ -1,50 +1,44 @@
 /**
- * Resize function taken from MDN
+ * Resize function based from MDN
  * https://developer.mozilla.org/en-US/docs/Web/Events/resize
  */
 const windowResize = (() => {
-  const callbacks = []
-  let running = false
+  let savedCallback = null;
+  let running = false;
 
-  // run the actual callbacks
+  // run the actual callback
   function runCallbacks() {
-    callbacks.forEach((callback) => {
-      callback()
-    })
-    running = false
+    savedCallback();
+    running = false;
   }
 
   // fired on resize event
   function resize() {
     if (!running) {
-      running = true
+      running = true;
       if (window.requestAnimationFrame) {
-        window.requestAnimationFrame(runCallbacks)
+        window.requestAnimationFrame(runCallbacks);
       } else {
-        setTimeout(runCallbacks, 66)
+        setTimeout(runCallbacks, 66);
       }
     }
   }
 
   // adds callback to loop
   function addCallback(callback) {
-    if (callback) {
-      callbacks.push(callback)
-    }
+    savedCallback = callback;
   }
 
   return {
     // public method to add additional callback
-    add: (callback) => {
-      if (!callbacks.length) {
-        window.addEventListener('resize', resize)
-      }
-      addCallback(callback)
+    add: callback => {
+      window.addEventListener("resize", resize);
+      addCallback(callback);
     },
     clear: () => {
-      window.removeEventListener('resize', resize)
+      window.removeEventListener("resize", resize);
     }
-  }
-})()
+  };
+})();
 
-export default windowResize
+export default windowResize;

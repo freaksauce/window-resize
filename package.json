@@ -1,6 +1,6 @@
 {
   "name": "window-resize",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Optimised window resize function using requestAnimationFrame",
   "main": "./lib/index.js",
   "scripts": {
